@@ -7,8 +7,8 @@ import {
 @Injectable()
 export class FooResolve implements Resolve<number> {
     constructor(private router: Router) { }
-    resolve(route: ActivatedRouteSnapshot): Promise<number> | boolean {
-        let id = route.params['id'];
+    resolve(route: ActivatedRouteSnapshot): Promise<number> {
+        const id = route.params['id'];
 
         console.log('FooResolve', id);
 
